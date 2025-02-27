@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  entry_type: MyString
+  content: MyString
+  llm_summary: 
+
+two:
+  user: two
+  entry_type: MyString
+  content: MyString
+  llm_summary: 

@@ -4,13 +4,27 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.1"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
+#background pg jobs
+gem "good_job"
+#Full-text search for PostgreSQL
+gem "pg_search"
+#Detects N+1 queries and unoptimized database usage
+gem "bullet"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+#presents entitities as table
+gem 'hirb'
+#adds schema comments to models
+gem "annotate"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
+gem "jbuilder"
+#faster JSON parser
+gem "oj"
+#performance profilig
+gem "rack-mini-profiler"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -29,6 +43,17 @@ gem "kamal", require: false
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
+#CLI Gems
+gem "tty-prompt"
+gem "tty-table"
+gem "colorize"
+gem "highline"
+
+#React gems
+gem 'webpacker'
+
+
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -44,8 +69,20 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  #for creating entity relationship diagrams?
+  gem 'rails-erd'
+  #for debugging in tests
+  gem "pry"
+  gem "pry-byebug"
+
+  #for unit testing
+  gem "rspec-rails"
+
+  gem "factory_bot_rails"
+
 end
 
-gem 'react-rails'
-gem 'hirb'
-gem 'rails-erd', group: :development
+group :test do
+  gem "database_cleaner-active_record"
+end
