@@ -72,6 +72,8 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -92,6 +94,15 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
     byebug (11.1.3)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     choice (0.2.0)
     coderay (1.1.3)
     colorize (1.1.0)
@@ -135,6 +146,10 @@ GEM
     hirb (0.7.3)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    importmap-rails (2.1.0)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.8.0)
     irb (1.15.1)
       pp (>= 0.6.0)
@@ -167,6 +182,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.4)
@@ -219,6 +235,11 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
+    propshaft (1.1.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -228,11 +249,12 @@ GEM
     psych (5.2.3)
       date
       stringio
+    public_suffix (6.0.1)
     puma (6.6.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (3.1.10)
+    rack (3.1.11)
     rack-mini-profiler (3.3.1)
       rack (>= 1.2.0)
     rack-proxy (0.7.7)
@@ -303,7 +325,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.73.1)
+    rubocop (1.73.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -320,7 +342,7 @@ GEM
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
-    rubocop-rails (2.30.2)
+    rubocop-rails (2.30.3)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
@@ -333,7 +355,14 @@ GEM
     ruby-graphviz (1.2.5)
       rexml
     ruby-progressbar (1.13.0)
+    rubyzip (2.4.1)
     securerandom (0.4.1)
+    selenium-webdriver (4.29.1)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     semantic_range (3.1.0)
     solid_cable (3.0.7)
       actioncable (>= 7.2)
@@ -358,6 +387,8 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
+    stimulus-rails (1.3.4)
+      railties (>= 6.0.0)
     stringio (3.1.5)
     strings (0.2.1)
       strings-ansi (~> 0.2)
@@ -385,6 +416,9 @@ GEM
       pastel (~> 0.8)
       strings (~> 0.2.0)
       tty-screen (~> 0.8)
+    turbo-rails (2.0.13)
+      actionpack (>= 7.1.0)
+      railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
@@ -397,11 +431,14 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+    websocket (1.2.11)
     websocket-driver (0.7.7)
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     wisper (2.0.1)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.7.2)
 
 PLATFORMS
@@ -421,6 +458,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   bullet
+  capybara
   colorize
   database_cleaner-active_record
   debug
@@ -428,11 +466,13 @@ DEPENDENCIES
   good_job
   highline
   hirb
+  importmap-rails
   jbuilder
   kamal
   oj
   pg (~> 1.1)
   pg_search
+  propshaft
   pry
   pry-byebug
   puma (>= 5.0)
@@ -441,12 +481,16 @@ DEPENDENCIES
   rails-erd
   rspec-rails
   rubocop-rails-omakase
+  selenium-webdriver
   solid_cable
   solid_cache
   solid_queue
+  stimulus-rails
+  thor
   thruster
   tty-prompt
   tty-table
+  turbo-rails
   tzinfo-data
   webpacker
 
