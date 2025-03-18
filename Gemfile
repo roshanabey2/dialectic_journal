@@ -22,8 +22,6 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # presents entitities as table
 gem "hirb"
-# adds schema comments to models
-gem "annotate"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 # faster JSON parser
@@ -75,6 +73,9 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
+
+  # adds annotations to models and route files
+  gem "annotaterb"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
