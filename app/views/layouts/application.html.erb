@@ -21,7 +21,8 @@
     <%= stylesheet_link_tag "css-zero/variables", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "css-zero/utilities", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <!-- javascript_include_tag "application", "data-turbo-track": "reload",
+    type: "module" %> -->
   </head>
 
   <body class="header-layout">
@@ -33,10 +34,28 @@
 
     <main id="main">
       <% if notice.present? %>
-        <div popover class="flash" style="--flash-position: 5rem;" data-controller="element-removal" data-action="animationend->element-removal#remove" role="alert"><%= notice %></div>
+        <div
+          popover
+          class="flash"
+          style="--flash-position: 5rem;"
+          data-controller="element-removal"
+          data-action="animationend->element-removal#remove"
+          role="alert"
+        ><%= notice %></div>
       <% end %>
       <div class="container">
-        <%= yield %>
+        <div class="sidebar-layout">
+          <header class="justify-between" id="header">
+           <!--  %= render "mobile_menu" %> -->
+           <!-- = render "header_menu" %> -->
+          </header>
+          <aside id="sidebar">
+            <%= render "shared/sidebar_menu" %>
+          </aside>
+          <main id="main">
+            <% 25.times do %><div class="rounded-lg bg-shade" style="min-block-size: 3rem"></div><% end %>
+          </main>
+        </div>
       </div>
     </main>
   </body>

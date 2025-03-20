@@ -1,0 +1,189 @@
+<div class="sidebar-layout">
+  <aside id="sidebar">
+    <div class="sidebar-menu">
+      <a class="btn sidebar-menu__button" href="#">
+        <div class="flex shrink-0 overflow-hidden rounded-lg bg-black">
+          <img class="colorize-white m-2" alt="ZI" src="app/assets/images/sidebar-logo-ac9ab8c5.svg" width="16" height="16" />
+        </div>
+        <div class="flex flex-col text-start leading-tight overflow-hidden">
+          <span class="overflow-ellipsis font-semibold">Zero Inc</span>
+          <span class="overflow-ellipsis text-xs">Enterprise</span>
+        </div>
+        <img class="colorize-black mis-auto" aria-hidden="true" src="app/assets/images/chevrons-up-down-dc468896.svg" width="16" height="16" />
+      </a>
+      <div class="sidebar-menu__content">
+        <div class="sidebar-menu__group">
+          <div class="sidebar-menu__group-label">Platform</div>
+          <div class="sidebar-menu__items">
+            <details open>
+              <summary class="btn sidebar-menu__button">
+                <img aria-hidden="true" src="app/assets/images/square-terminal-76ac3793.svg" width="16" height="16" />
+                <span class="overflow-ellipsis">Playground</span>
+              </summary>
+              <nav class="sidebar-menu__sub">
+                <a class="btn sidebar-menu__button" aria-current="page" href="#">History</a>
+                <a class="btn sidebar-menu__button" href="#">Starred</a>
+                <a class="btn sidebar-menu__button" href="#">Settings</a>
+              </nav>
+            </details>
+            <details>
+              <summary class="btn sidebar-menu__button">
+                <img aria-hidden="true" src="app/assets/images/bot-c9a2d0cd.svg" width="16" height="16" />
+                <span class="overflow-ellipsis">Models</span>
+              </summary>
+              <nav class="sidebar-menu__sub">
+                <a class="btn sidebar-menu__button" href="#">Genesis</a>
+                <a class="btn sidebar-menu__button" href="#">Explorer</a>
+                <a class="btn sidebar-menu__button" href="#">Quantum</a>
+              </nav>
+            </details>
+            <details>
+              <summary class="btn sidebar-menu__button">
+                <img aria-hidden="true" src="app/assets/images/book-open-f712ff45.svg" width="16" height="16" />
+                <span class="overflow-ellipsis">Documentation</span>
+              </summary>
+              <nav class="sidebar-menu__sub">
+                <a class="btn sidebar-menu__button" href="#">Documentation</a>
+                <a class="btn sidebar-menu__button" href="#">Get Started</a>
+                <a class="btn sidebar-menu__button" href="#">Tutorials</a>
+                <a class="btn sidebar-menu__button" href="#">Changelog</a>
+              </nav>
+            </details>
+            <details>
+              <summary class="btn sidebar-menu__button">
+                <img aria-hidden="true" src="app/assets/images/settings-2-5b29fbba.svg" width="16" height="16" />
+                <span class="overflow-ellipsis">Settings</span>
+              </summary>
+              <nav class="sidebar-menu__sub">
+                <a class="btn sidebar-menu__button" href="#">General</a>
+                <a class="btn sidebar-menu__button" href="#">Teams</a>
+                <a class="btn sidebar-menu__button" href="#">Billing</a>
+                <a class="btn sidebar-menu__button" href="#">Limits</a>
+              </nav>
+            </details>
+          </div>
+        </div>
+        <div class="sidebar-menu__group">
+          <div class="sidebar-menu__group-label">Projects</div>
+          <nav class="sidebar-menu__items">
+            <a class="btn sidebar-menu__button" href="#">
+              <img aria-hidden="true" src="app/assets/images/frame-f4f76e6f.svg" width="16" height="16" />
+              <span class="overflow-ellipsis">Design Engineering</span>
+            </a>        <a class="btn sidebar-menu__button" href="#">
+              <img aria-hidden="true" src="app/assets/images/chart-pie-5d101e1e.svg" width="16" height="16" />
+              <span class="overflow-ellipsis">Sales & Marketing</span>
+            </a>        <a class="btn sidebar-menu__button" href="#">
+              <img aria-hidden="true" src="app/assets/images/map-226e585f.svg" width="16" height="16" />
+              <span class="overflow-ellipsis">Travel</span>
+            </a>        <a class="btn sidebar-menu__button" aria-disabled="true">
+              <img aria-hidden="true" src="app/assets/images/ellipsis-a6a4aa61.svg" width="16" height="16" />
+              <span class="overflow-ellipsis">More</span>
+            </a>      </nav>
+        </div>
+      </div>
+      <a class="btn sidebar-menu__button mbs-auto" href="#">
+        <div class="flex shrink-0 overflow-hidden rounded-lg">
+          <img class="colorize-none" alt="CN" src="app/assets/images/cartoon-93de1535.jpg" width="32" height="32" />
+        </div>
+        <div class="flex flex-col text-start leading-tight overflow-hidden">
+          <span class="overflow-ellipsis max-i-full font-semibold">Roshmonosh</span>
+          <span class="overflow-ellipsis max-i-full text-xs">doopus@poop.com</span>
+        </div>
+        <img class="colorize-black mis-auto" aria-hidden="true" src="app/assets/images/chevrons-up-down-dc468896.svg" width="16" height="16" />
+      </a></div>
+  </aside>
+  <main id="main">
+    <div class="hide@md" data-controller="dialog">
+      <button type="button" class="btn btn--icon" data-action="dialog#showModal">
+        <img aria-hidden="true" src="app/assets/images/menu-5b8caef9.svg" width="20" height="20" />
+        <span class="sr-only">Open menu</span>
+      </button>
+      <dialog class="sheet sheet--left" style="--sheet-size: 288px;" data-dialog-target="menu" data-action="click->dialog#closeOnClickOutside">
+        <div class="sheet__content p-2">
+          <div class="sidebar-menu">
+            <a class="btn sidebar-menu__button" href="#">
+              <div class="flex shrink-0 overflow-hidden rounded-lg bg-black">
+                <img class="colorize-white m-2" alt="ZI" src="app/assets/images/sidebar-logo-ac9ab8c5.svg" width="16" height="16" />
+              </div>
+              <div class="flex flex-col text-start leading-tight overflow-hidden">
+                <span class="overflow-ellipsis font-semibold">Zero Inc</span>
+                <span class="overflow-ellipsis text-xs">Enterprise</span>
+              </div>
+              <img class="colorize-black mis-auto" aria-hidden="true" src="app/assets/images/chevrons-up-down-dc468896.svg" width="16" height="16" />
+            </a>
+            <div class="sidebar-menu__content">
+              <div class="sidebar-menu__group">
+                <div class="sidebar-menu__group-label">Platform</div>
+                <div class="sidebar-menu__items">
+                  <details open>
+                    <summary class="btn sidebar-menu__button">
+                      <img aria-hidden="true" src="app/assets/images/square-terminal-76ac3793.svg" width="16" height="16" />
+                      <span class="overflow-ellipsis">Playground</span>
+                    </summary>
+                    <nav class="sidebar-menu__sub">
+                      <a class="btn sidebar-menu__button" aria-current="page" href="#">History</a>
+                      <a class="btn sidebar-menu__button" href="#">Starred</a>
+                      <a class="btn sidebar-menu__button" href="#">Settings</a>
+                    </nav>
+                  </details>
+                  <details>
+                    <summary class="btn sidebar-menu__button">
+                      <img aria-hidden="true" src="app/assets/images/bot-c9a2d0cd.svg" width="16" height="16" />
+                      <span class="overflow-ellipsis">Models</span>
+                    </summary>
+                    <nav class="sidebar-menu__sub">
+                      <a class="btn sidebar-menu__button" href="#">Genesis</a>
+                      <a class="btn sidebar-menu__button" href="#">Explorer</a>
+                      <a class="btn sidebar-menu__button" href="#">Quantum</a>
+                    </nav>
+                  </details>
+                  <details>
+                    <summary class="btn sidebar-menu__button">
+                      <img aria-hidden="true" src="app/assets/images/book-open-f712ff45.svg" width="16" height="16" />
+                      <span class="overflow-ellipsis">Documentation</span>
+                    </summary>
+                    <nav class="sidebar-menu__sub">
+                      <a class="btn sidebar-menu__button" href="#">Documentation</a>
+                      <a class="btn sidebar-menu__button" href="#">Get Started</a>
+                      <a class="btn sidebar-menu__button" href="#">Tutorials</a>
+                      <a class="btn sidebar-menu__button" href="#">Changelog</a>
+                    </nav>
+                  </details>
+                  <details>
+                    <summary class="btn sidebar-menu__button">
+                      <img aria-hidden="true" src="app/assets/images/settings-2-5b29fbba.svg" width="16" height="16" />
+                      <span class="overflow-ellipsis">Settings</span>
+                    </summary>
+                    <nav class="sidebar-menu__sub">
+                      <a class="btn sidebar-menu__button" href="#">General</a>
+                      <a class="btn sidebar-menu__button" href="#">Teams</a>
+                      <a class="btn sidebar-menu__button" href="#">Billing</a>
+                      <a class="btn sidebar-menu__button" href="#">Limits</a>
+                    </nav>
+                  </details>
+                </div>
+              </div>
+              <div class="sidebar-menu__group">
+                <div class="sidebar-menu__group-label">Conversations</div>
+                <nav class="sidebar-menu__items">
+                  <a class="btn sidebar-menu__button" href="#">
+                    <img aria-hidden="true" src="app/assets/images/frame-f4f76e6f.svg" width="16" height="16" />
+                    <span class="overflow-ellipsis">Design Engineering</span>
+                  </a>        <a class="btn sidebar-menu__button" href="#">
+                    <img aria-hidden="true" src="app/assets/images/chart-pie-5d101e1e.svg" width="16" height="16" />
+                    <span class="overflow-ellipsis">Sales & Marketing</span>
+                  </a>        <a class="btn sidebar-menu__button" href="#">
+                    <img aria-hidden="true" src="app/assets/images/map-226e585f.svg" width="16" height="16" />
+                    <span class="overflow-ellipsis">Travel</span>
+                  </a>        <a class="btn sidebar-menu__button" aria-disabled="true">
+                    <img aria-hidden="true" src="app/assets/images/ellipsis-a6a4aa61.svg" width="16" height="16" />
+                    <span class="overflow-ellipsis">More</span>
+                  </a>      </nav>
+              </div>
+            </div>
+
+        </div>
+      </dialog>
+    </div>
+  </main>
+</div>
