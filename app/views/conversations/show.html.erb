@@ -1,0 +1,17 @@
+<div class="chat-page-container">
+  <div class="conversation-panel">
+    <div class="chat-container" data-controller="conversation">
+      <div class="chat-messages" data-conversation-target="messages">
+        <!-- Messages from Talker agent will appear here -->
+      </div>
+      <input type="text" class="chat-input" placeholder="Type your message..." data-action="keydown->conversation#sendMessage">
+    </div>
+  </div>
+
+  <div class="notes-panel" data-conversation-target="notesPanel" hidden>
+    <h3>Notes</h3>
+    <div class="notes-content" data-conversation-target="notesContent">
+      <!-- Rich formatted notes from Structurer agent will appear here -->
+    </div>
+  </div>
+</div>
