@@ -100,6 +100,7 @@ group :test do
   gem "database_cleaner-active_record"
 end
 
-gem "css-zero", "~> 1.1"
+gem "css-zero"
+
 
 gem "activeagent", "~> 0.2.6"
