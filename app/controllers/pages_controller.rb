@@ -6,8 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @user = current_user
-    @conversations = currentuser.conversations
-    @tasks = current_user.tasks
+    # @user = current_user
+    # @conversations = currentuser.conversations
+    # @tasks =
   end
 end
