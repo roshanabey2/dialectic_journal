@@ -100,4 +100,4 @@ end
 gem "css-zero"
 
 
-gem "activeagent", "~> 0.2.6"
+gem "activeagent", "~> 0.3.1"
