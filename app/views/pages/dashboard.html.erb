@@ -1,13 +1,18 @@
 <div class="chat-page-container">
   <div class="conversation-panel">
     <div class="chat-container" data-controller="conversation">
-
-      <input
-        type="text"
-        class="chat-input"
-        placeholder="Type your message..."
-        data-action="keydown->conversation#sendMessage"
-      >
+      <form name="input-container" class="chat-input-container">
+        <input
+          type="text"
+          class="chat-input"
+          placeholder="Type your message..."
+          data-action="keydown->conversation#sendMessage"
+        >
+        <button name="button" type="submit" class="btn btn--icon">
+          <img aria-hidden="true" src="/assets/select-arrow.svg" width="16" height="16"/>
+          <span class="sr-only">Send Prompt</span>
+        </button>
+      </form>
     </div>
   </div>
 
