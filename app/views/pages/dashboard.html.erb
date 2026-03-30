@@ -1,23 +1,30 @@
 <div class="chat-page-container">
   <div class="conversation-panel">
     <div class="chat-container" data-controller="conversation">
-      <form name="input-container" class="chat-input-container">
+      <div class="chat-header">
+        <h2>Dialogue</h2>
+        <span>Live structuring</span>
+      </div>
+      <div class="chat-messages" data-conversation-target="messages">
+        <!-- Messages from Talker agent will appear here -->
+      </div>
+      <form class="chat-input-container" data-action="submit->conversation#submitMessage">
         <input
           type="text"
           class="chat-input"
           placeholder="Type your message..."
+          data-conversation-target="input"
           data-action="keydown->conversation#sendMessage"
         >
-        <button name="button" type="submit" class="btn btn--icon">
-          <img aria-hidden="true" src="/assets/select-arrow.svg" width="16" height="16"/>
-          <span class="sr-only">Send Prompt</span>
+        <button name="button" type="submit" class="chat-input-button">
+          Send
         </button>
       </form>
     </div>
   </div>
 
   <div class="notes-panel" data-conversation-target="notesPanel" hidden>
-    <h3>Notes</h3>
+    <h3>Structured Notes</h3>
     <div class="notes-content" data-conversation-target="notesContent">
       <!-- Rich formatted notes from Structurer agent will appear here -->
     </div>

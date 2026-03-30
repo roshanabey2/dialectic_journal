@@ -1,27 +1,38 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["messages", "notesPanel", "notesContent"]
+  static targets = ["messages", "notesPanel", "notesContent", "input"]
 
   connect() {
     this.checkForNotes()
   }
 
   sendMessage(event) {
-    if (event.key === "Enter" && event.target.value.trim() !== "") {
-      const message = event.target.value.trim()
-      this.addMessage("user", message)
-      event.target.value = ""
-      this.fetchAgentResponse(message)
+    if (event.key === "Enter") {
+      event.preventDefault()
+      this.submitCurrentMessage()
     }
+  }
+
+  submitMessage(event) {
+    event.preventDefault()
+    this.submitCurrentMessage()
   }
 
   addMessage(role, content) {
     const messageElement = document.createElement("div")
-    messageElement.classList.add("chat-message")
+    messageElement.classList.add("chat-message", `chat-message--${role}`)
     messageElement.textContent = content
     this.messagesTarget.appendChild(messageElement)
     this.messagesTarget.scrollTop = this.messagesTarget.scrollHeight
+  }
+
+  submitCurrentMessage() {
+    const message = this.inputTarget.value.trim()
+    if (message === "") return
+    this.addMessage("user", message)
+    this.inputTarget.value = ""
+    this.fetchAgentResponse(message)
   }
 
   fetchAgentResponse(message) {

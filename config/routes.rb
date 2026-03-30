@@ -55,6 +55,14 @@
 #                     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                                    active_storage/direct_uploads#create
 
 Rails.application.routes.draw do
+  resources :chats do
+    resources :messages, only: [ :create ]
+  end
+  resources :models, only: [ :index, :show ] do
+    collection do
+      post :refresh
+    end
+  end
   resources :users
   resource :session
   resources :passwords, param: :token

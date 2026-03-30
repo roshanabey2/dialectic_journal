@@ -99,5 +99,4 @@ end
 
 gem "css-zero"
 
-
-gem "activeagent", "~> 0.2.6"
+gem "ruby_llm", "~> 1.14"
