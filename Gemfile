@@ -97,6 +97,6 @@ group :test do
   gem "database_cleaner-active_record"
 end
 
-gem "css-zero"
-
 gem "ruby_llm", "~> 1.14"
+
+gem "tailwindcss-rails", "~> 4.4"
